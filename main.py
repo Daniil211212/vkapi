@@ -14,4 +14,5 @@ for event in longpoll.listen():
             msg = event.text.lower()
             id = event.chat_id
             if msg == "#pokex5":
-                sender(id, "@all, @all, @all, @all, @all. Poke Машина запущена")
+                for i in range(5):
+                    sender(id, "@all, @all, @all, @all, @all. Poke Машина запущена")
