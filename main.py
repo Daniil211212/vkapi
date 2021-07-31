@@ -11,7 +11,7 @@ longpoll = VkBotLongPoll(vk_session, 206197090)
 def sender(id, text):
     vk_session.method('messages.send', {'chat_id': id, 'message' : text, 'random_id' : 0})
 for event in longpoll.listen():
-    if event.type == VkBotLongPoll.MESSAGE_NEW:
+    if event.type == VkBotEventType.MESSAGE_NEW:
         if event.from_chat:
             msg = event.text.lower()
             id = event.chat_id
