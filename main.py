@@ -16,3 +16,5 @@ for event in longpoll.listen():
             if msg == "#pokex5":
                 for i in range(5):
                     sender(id, "@all, @all, @all, @all, @all. Poke Машина запущена")
+            if msg == "#status":
+                sender(id, "Status: Online, Dev: @rodionovd21")
