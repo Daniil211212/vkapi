@@ -21,4 +21,3 @@ for event in longpoll.listen():
             if msg == "#pokex10":
                 for i in range(10):
                     sender(id, "@all, @all, @all, @all, @all. Poke Машина запущена")
-            
