@@ -7,7 +7,7 @@ vk_session = vk_api.VkApi(token=main_token)
 longpoll = VkLongPoll(vk_session)
 
 def sender(id, text):
-    vk_session.method('messages_send', {'chat_id': id, 'message' : text, 'random_id' : 0})
+    vk_session.method('message_send', {'chat_id': id, 'message' : text, 'random_id' : 0})
 for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW:
         if event.from_chat:
